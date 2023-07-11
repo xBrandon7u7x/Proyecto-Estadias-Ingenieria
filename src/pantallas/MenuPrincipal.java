@@ -31,6 +31,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         btncerrarsesion = new javax.swing.JButton();
         btnsalir = new javax.swing.JButton();
         btn_nuevoregistro = new javax.swing.JButton();
+        btnvertodos = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,6 +59,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
             }
         });
 
+        btnvertodos.setText("Ver todos");
+        btnvertodos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnvertodosActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -75,8 +83,10 @@ public class MenuPrincipal extends javax.swing.JFrame {
                         .addComponent(jLabel1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(27, 27, 27)
-                        .addComponent(btn_nuevoregistro)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(btn_nuevoregistro)
+                        .addGap(42, 42, 42)
+                        .addComponent(btnvertodos, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(309, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -84,7 +94,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addGap(74, 74, 74)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_nuevoregistro)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_nuevoregistro)
+                    .addComponent(btnvertodos))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 290, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnsalir)
@@ -106,10 +118,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnsalirActionPerformed
 
     private void btn_nuevoregistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nuevoregistroActionPerformed
-        RegistrarMaestro abrir= new RegistrarMaestro();
+        RegistrarMaestro abrir = new RegistrarMaestro();
         abrir.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btn_nuevoregistroActionPerformed
+
+    private void btnvertodosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnvertodosActionPerformed
+        BuscarMaestro abrir = new BuscarMaestro();
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnvertodosActionPerformed
 
     /**
      * @param args the command line arguments
@@ -150,6 +168,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btn_nuevoregistro;
     private javax.swing.JButton btncerrarsesion;
     private javax.swing.JButton btnsalir;
+    private javax.swing.JButton btnvertodos;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
